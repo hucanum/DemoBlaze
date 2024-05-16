@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pages.HomePage;
+import pages.Cart;
 import pages.Header;
 import pages.Product;
 import testdata.URL;
@@ -25,6 +26,7 @@ public class BaseTest {
 	public static HomePage homePage;
 	public static Header header;
 	public static Product product;
+	public static Cart cart;
 	
 	
 	@BeforeClass
@@ -44,6 +46,7 @@ public class BaseTest {
 		homePage = new HomePage(driver);
 		header = new Header(driver);
 		product = new Product(driver);
+		cart = new Cart(driver);
 	
 		driver.navigate().to(URL.MAIN_PAGE);
 		assertEquals("PRODUCT STORE", homePage.getLogo());

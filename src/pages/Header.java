@@ -9,7 +9,7 @@ public class Header {
 		this.driver = driver;
 	}
 	
-	private By cart = By.id("cartum");
+	private By cart = By.id("cartur");
 	private By usernameInput = By.id("loginusername");
 	private By passwordInput = By.id("loginpassword");
 	private By loginButton = By.xpath("//div[@id=\"logInModal\"]//button[text()=\"Log in\"]");
