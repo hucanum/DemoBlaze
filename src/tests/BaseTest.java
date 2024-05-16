@@ -17,7 +17,9 @@ import pages.HomePage;
 import pages.Cart;
 import pages.Header;
 import pages.Product;
+import testdata.OrderForm;
 import testdata.URL;
+import testdata.User;
 
 
 public class BaseTest {
@@ -28,6 +30,8 @@ public class BaseTest {
 	public static Product product;
 	public static Cart cart;
 	
+	public static User user = new User("user");
+	public static OrderForm placeOrderForm = new OrderForm("placeOrderForm");
 	
 	@BeforeClass
 	public static void setUp() {

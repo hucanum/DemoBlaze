@@ -30,5 +30,6 @@ public class Header {
 	public String getLoggedUser() {
 		return driver.findElement(loggedUser).getText();
 	}
+	
 
 }

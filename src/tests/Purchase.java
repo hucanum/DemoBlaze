@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.Test;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Purchase extends BaseTest {
 	
@@ -12,6 +11,12 @@ public class Purchase extends BaseTest {
 		Thread.sleep(1000);
 		driver.switchTo().alert().accept();
 		header.clickCart();
+		cart.clickPlaceOrder();
+		cart.entername(placeOrderForm.getName());
+		cart.entercard(placeOrderForm.getCard());
+		Thread.sleep(1000);
+		cart.clickPurchase();
+		cart.alertDisplayed();
 	}
 
 }
