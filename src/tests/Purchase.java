@@ -18,5 +18,17 @@ public class Purchase extends BaseTest {
 		cart.clickPurchase();
 		cart.alertDisplayed();
 	}
+	
+	@Test
+	public void deleteFromCart () throws InterruptedException {
+		homePage.clickProduct();
+		product.clickAdd();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+		header.clickCart();
+		cart.clickDelete();
+		
+	}
+	
 
 }

@@ -14,6 +14,7 @@ public class Header {
 	private By passwordInput = By.id("loginpassword");
 	private By loginButton = By.xpath("//div[@id=\"logInModal\"]//button[text()=\"Log in\"]");
 	private By loggedUser = By.xpath("//a[@id=\"nameofuser\"]");
+	private By logout = By.id("logout2");
 	
 	public void clickCart() {
 		driver.findElement(cart).click();
@@ -30,6 +31,8 @@ public class Header {
 	public String getLoggedUser() {
 		return driver.findElement(loggedUser).getText();
 	}
-	
+	public void clickLogout() {
+		driver.findElement(logout).click();
+	}
 
 }

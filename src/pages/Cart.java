@@ -14,6 +14,7 @@ public class Cart {
 	private By cardInput = By.id("card");
 	public By purchase = By.xpath("//button[text()=\"Purchase\"]");
 	public By alert = By.xpath("//div[h2=\"Thank you for your purchase!\"]");
+	public By delete = By.xpath("//tr[@class=\"success\"]/descendant::a");
 	
 	public void clickPlaceOrder() {
 		driver.findElement(placeOrder).click();
@@ -29,5 +30,8 @@ public class Cart {
 	}
 	public boolean alertDisplayed() {
 		return driver.findElement(alert).isDisplayed();
+	}
+	public void clickDelete() {
+		driver.findElement(delete).click();
 	}
 }
